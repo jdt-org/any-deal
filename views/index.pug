@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= 
+  p Welcome to #{title}
+
+  form(name="subreddit-search-pick" class="subreddit-form")
+    input(type="text" required)
+
+  script(src='./script.js') 
