@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"yarn watch-node\" \"yarn watch-sass\" \"browser-sync start --server --files ./public/stylesheets/*.css\"",
+    "start": "concurrently \"yarn watch-node\" \"yarn watch-sass\" \"browser-sync start --proxy localhost:3000 --port 3003 --files ./\"",
     "watch-node": "nodemon --watch ./public ./bin/www",
     "watch-sass": "sass --watch ./src/styles/sass:./public/stylesheets"
 

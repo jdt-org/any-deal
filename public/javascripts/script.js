@@ -1,1 +1,1 @@
-document.querySelector('')
+console.log("Client Side JS Served!")
