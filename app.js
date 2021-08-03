@@ -39,7 +39,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.post('/', function(req, res) {
-  req.
+  console.log(req.subreddit_select)
 })
 
 
