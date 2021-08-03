@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"yarn watch-node\" \"yarn watch-sass\" \"browser-sync start --proxy localhost:3000 --port 3003 --files ./\"",
-    "watch-node": "nodemon --watch ./public ./bin/www",
-    "watch-sass": "sass --watch ./src/styles/sass:./public/stylesheets"
-
+    "start": "node ./bin/www",
+    "dev": "concurrently \"nodemon --ignore public\" \"sass --watch ./src/styles/sass:./public/stylesheets\" \"browser-sync start --proxy localhost:3000 --port 3003 --files *\"",
+    "watch-node": "",
+    "watch-sass": ""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,6 +14,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.12",
     "pug": "^3.0.2",
     "sass": "^1.35.2"

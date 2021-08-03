@@ -1,3 +1,5 @@
+const { get } = require("../../routes");
+
 console.log("Client Side JS Served!")
 const someUrlToHit = `https://api.reddit.com/r/${userSelectedSubreddit}`;
 
@@ -26,3 +28,6 @@ function fetchSubredditListing() {
     resp.arrThatCameBack
   })
 }
+
+const searchedSub = document.getElementById('subreddit-form');
+console.log(searchedSub)

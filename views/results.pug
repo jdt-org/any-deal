@@ -1,0 +1,9 @@
+extends layout 
+
+block content
+  ol
+    each item in subResults
+      li 
+        img(src= item.data.thumbnail)
+        p= item.data.title
+        a(href= item.data.url) #{item.data.url}
