@@ -2,7 +2,7 @@ const { get } = require("../../routes");
 
 console.log("Client Side JS Served!")
 const someUrlToHit = `https://api.reddit.com/r/${userSelectedSubreddit}`;
-
+``
 const subredditInputEl = document.querySelector('#subreddit-select');
 
 const dataListValues = document.querySelector('#subreddits')
