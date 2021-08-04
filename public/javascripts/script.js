@@ -1,30 +1,17 @@
-/* const { get } = require("../../routes");
+// Create container for results
+const resultsContainer = document.createElement('div')
+resultsContainer.className = 'results-container';
+document.body.append(resultsContainer)
 
-console.log("Client Side JS Served!")
-const someUrlToHit = `https://api.reddit.com/r/${userSelectedSubreddit}`;
-``
-const subredditInputEl = document.querySelector('#subreddit-select');
+// Add event listener to form and request subreddit results from server
+const subredditForm = document.getElementById('subreddit-form')
+subredditForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetchResults(e.target[0].value)
+})
 
-const dataListValues = document.querySelector('#subreddits')
-  .map(option => {
-    return option.value
-  });
-
-const subreddits = [...dataListValues]
-let userSelectedSubreddit;
-subredditInputEl.addEventListener('keydown', function(e) {
-  
-  if(valueArr.find(e.target.value)) {
-    userSelectedSubreddit = e.target.value;
-  } 
-  
-  else {
-    userSelectedSubreddit = undefined;
-  }
-});
-
-function fetchSubredditListing() {
-  fetch(someUrlToHit, (resp) => {
-    resp.arrThatCameBack
-  })
-} */
+async function fetchResults(subreddit) {
+  const res = await fetch(`/results?subreddit=${subreddit}`);
+  const data = await res.text();
+  resultsContainer.innerHTML = data;
+}
