@@ -1,16 +1,17 @@
 extends layout
 
 block content
-  h1 AnyDeal💰
-  p Welcome to #{title}
-  
-  form(id="subreddit-form" method='post')
-    input(name="subreddit" type="text" list="subreddits" id="subreddit-input" required)
-    datalist(id="subreddits")
-      option(value="gamedeals")
-      option(value="buildapcsales")
-      option(value="steamdeals")
-      option(value="AudioProductionDeals")
-      option(value="gundeals")
-      option(value="nintendoswitchdeals")
+  div(class="content")
+    h1 AnyDeal💰
+    p Pick a Subreddit
+    
+    form(id="subreddit-form" method='post')
+      input(name="subreddit" type="text" list="subreddits" id="subreddit-input" required)
+      datalist(id="subreddits")
+        option(value="gamedeals")
+        option(value="buildapcsales")
+        option(value="steamdeals")
+        option(value="AudioProductionDeals")
+        option(value="gundeals")
+        option(value="nintendoswitchdeals")
   script(src='./javascripts/script.js') 

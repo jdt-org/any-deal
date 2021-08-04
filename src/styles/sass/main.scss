@@ -1,2 +1,21 @@
-@use "partials/_subreddit-form.scss"
+@use "partials/_subreddit-form.scss";
+@use "partials/_reset.scss";
 
+body {
+  display: flex;
+  justify-content: center;
+
+}
+
+.content {
+  margin-top: 15%;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+input {
+  max-width: 30vw;
+}

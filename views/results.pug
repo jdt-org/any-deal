@@ -4,6 +4,7 @@ block content
   ol
     each item in subResults
       li 
-        img(src= item.data.thumbnail)
         p= item.data.title
+        img(src= item.data.thumbnail alt="no image available")
+        
         a(href= item.data.url) #{item.data.url}
