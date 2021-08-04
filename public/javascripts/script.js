@@ -28,9 +28,3 @@ function fetchSubredditListing() {
     resp.arrThatCameBack
   })
 } */
-
-const subredditForm = document.getElementById('subreddit-form');
-subredditForm.onsubmit = (e) => {
-  const searchedSub = document.getElementById('subreddit-input').value;
-  /* subredditForm.action = `results/${searchedSub}`; */
-}
