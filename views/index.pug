@@ -2,16 +2,11 @@ extends layout
 
 block content
   div(class="content")
-    h1 AnyDeal💰
-    p Pick a Subreddit
-    
-    form(id="subreddit-form" method='post')
-      input(name="subreddit" type="text" list="subreddits" id="subreddit-input" required)
-      datalist(id="subreddits")
-        option(value="gamedeals")
-        option(value="buildapcsales")
-        option(value="steamdeals")
-        option(value="AudioProductionDeals")
-        option(value="gundeals")
-        option(value="nintendoswitchdeals")
+  h1 AnyDeal💰
+  p We save you monies 
+  form(id="subreddit-form" method='get' action='results' autocomplete='off')
+    input(name="subreddit" type="text" list="subreddits" id="subreddit-input" required)
+    datalist(id="subreddits")
+      each item in whiteList
+        option(value=item)
   script(src='./javascripts/script.js') 
