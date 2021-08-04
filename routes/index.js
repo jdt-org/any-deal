@@ -1,15 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var fetch = require('node-fetch');
-
-
-/* router.get('/favicon.ico', (req, res) => {
-  return
-}) */
+const whiteList = require('../whiteList');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { whiteList });
 });
 
 router.get('/results', function (req, res) {
@@ -21,6 +17,5 @@ router.get('/results', function (req, res) {
       res.render('results', { subResults })
     })
 })
-
 module.exports = router;
  
