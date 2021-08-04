@@ -1,4 +1,4 @@
-const { get } = require("../../routes");
+/* const { get } = require("../../routes");
 
 console.log("Client Side JS Served!")
 const someUrlToHit = `https://api.reddit.com/r/${userSelectedSubreddit}`;
@@ -27,7 +27,10 @@ function fetchSubredditListing() {
   fetch(someUrlToHit, (resp) => {
     resp.arrThatCameBack
   })
-}
+} */
 
-const searchedSub = document.getElementById('subreddit-form');
-console.log(searchedSub)
+const subredditForm = document.getElementById('subreddit-form');
+subredditForm.onsubmit = (e) => {
+  const searchedSub = document.getElementById('subreddit-input').value;
+  /* subredditForm.action = `results/${searchedSub}`; */
+}
