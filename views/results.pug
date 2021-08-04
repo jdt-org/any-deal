@@ -1,10 +1,13 @@
-ol
-  each item in subResults
-    li 
-      if /^https:/.test(item.data.thumbnail)
-        p= item.data.title
-        img(src= item.data.thumbnail alt='')
-        a(href= item.data.url) #{item.data.url}
-      else
-        p= item.data.title
-        a(href= item.data.url) #{item.data.url}
+extends layout 
+
+block content
+  ol
+    each item in subResults
+      li 
+        if /^https:/.test(item.data.thumbnail)
+          p= item.data.title
+          img(src= item.data.thumbnail alt='')
+          a(href= item.data.url) #{item.data.url}
+        else
+          p= item.data.title
+          a(href= item.data.url) #{item.data.url}
