@@ -5,7 +5,7 @@ const whiteList = require('../whiteList');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { whiteList });
 });
 
 router.get('/results', function (req, res) {
@@ -14,9 +14,8 @@ router.get('/results', function (req, res) {
     .then(res => res.json())
     .then(data => {
       const subResults = data.data.children
-      res.render('results', { subResults, whiteList })
+      res.render('results', { subResults })
     })
 })
-
 module.exports = router;
  
