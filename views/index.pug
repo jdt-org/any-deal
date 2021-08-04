@@ -7,6 +7,6 @@ block content
   form(id="subreddit-form" method='get' action='results' autocomplete='off')
     input(name="subreddit" type="text" list="subreddits" id="subreddit-input" required)
     datalist(id="subreddits")
-      each item in whiteList.module
+      each item in whiteList
         option(value=item)
   script(src='./javascripts/script.js') 
