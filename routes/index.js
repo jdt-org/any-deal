@@ -1,11 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fetch = require('node-fetch');
-
-
-/* router.get('/favicon.ico', (req, res) => {
-  return
-}) */
+const whiteList = require('../whiteList');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -18,7 +14,7 @@ router.get('/results', function (req, res) {
     .then(res => res.json())
     .then(data => {
       const subResults = data.data.children
-      res.render('results', { subResults })
+      res.render('results', { subResults, whiteList })
     })
 })
 
