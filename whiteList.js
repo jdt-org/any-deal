@@ -1,5 +1,4 @@
-     
- const whiteList = [
+const whiteList = [
   "gamedeals",
   "buildapcsales",
   "steamdeals",
