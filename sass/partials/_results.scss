@@ -1,0 +1,32 @@
+.results-container {
+  padding: 0 2rem;
+
+
+  ul li {
+    position: relative;
+    margin: 1.5rem;
+    padding: 1.25rem;
+
+    background-color: whitesmoke;
+    border: 2px solid black;
+
+    display: grid;
+    grid-template-rows: 140px;
+    grid-template-columns: minmax(140px, auto) 1fr ;
+    align-items: center;
+  }
+}
+
+.result-info-container {
+  height: 100%;
+
+  padding: 0 1.25rem;
+
+
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,9 +1,9 @@
-@use "partials/_subreddit-form.scss";
-@use "partials/_reset.scss";
+//@use "partials/_subreddit-form.scss";
+@use "partials/reset";
+@use 'partials/base';
+@use 'partials/results';
 
 body {
-  display: flex;
-  justify-content: center;
 
 }
 

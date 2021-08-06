@@ -15,8 +15,10 @@ router.get('/results', function (req, res) {
   } else {
     fetch(`https://api.reddit.com/r/${subreddit}/hot?limit=100`)
       .then(res => res.json())
-        .then(data => {
-          const subResults = data.data.children
+      .then(body => {
+          const postTypes = body.data.children
+        const subResults = body.data.children
+        console.log(postTypes)
           res.render('results', { subResults })
     })
   }

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "concurrently \"nodemon --ignore public\" \"sass --watch ./src/styles/sass:./public/stylesheets\" \"browser-sync start --proxy localhost:3000 --port 3003 --files *\" "
+    "dev": "concurrently \"nodemon --ignore public\" \"sass --watch sass/index.scss:public/style.css\" \"browser-sync start --proxy localhost:3000 --port 3003 --files *\" "
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

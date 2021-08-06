@@ -1,8 +1,3 @@
-.subreddit-form {
-  display: flex;
-  justify-content: center;
-}
-
 /* CSS Reset from https://piccalil.li/blog/a-modern-css-reset/ */
 /* Box sizing rules */
 *,
@@ -79,8 +74,60 @@ select {
   }
 }
 body {
+  background-color: #143152;
+}
+
+header {
+  position: relative;
+  padding: 0.5rem 2rem;
+  border-bottom: 2px solid black;
+  background-color: black;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+header form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-intro {
+  padding: 12px;
+  background-color: orange;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.header-intro :first-child {
+  padding-right: 1rem;
+}
+
+.results-container {
+  padding: 0 2rem;
+}
+.results-container ul li {
+  position: relative;
+  margin: 1.5rem;
+  padding: 1.25rem;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: 140px;
+  grid-template-columns: minmax(140px, auto) 1fr;
+  align-items: center;
+}
+
+.result-info-container {
+  height: 100%;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.result-info-container p {
+  margin-bottom: 1rem;
 }
 
 .content {
@@ -95,4 +142,4 @@ input {
   max-width: 30vw;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */
