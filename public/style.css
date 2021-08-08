@@ -107,27 +107,37 @@ header form {
 
 .results-container {
   padding: 0 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .results-container ul li {
+  width: 100%;
   position: relative;
   margin: 1.5rem;
   padding: 1.25rem;
   background-color: whitesmoke;
   border: 2px solid black;
   display: grid;
-  grid-template-rows: 140px;
-  grid-template-columns: minmax(140px, auto) 1fr;
+  grid-template-rows: fit-content;
+  grid-template-columns: fit-content 1fr;
   align-items: center;
 }
 
 .result-info-container {
-  height: 100%;
+  max-width: inherit;
   padding: 0 1.25rem;
-  display: flex;
-  flex-direction: column;
+  /*  display: flex;
+  flex-direction: column; */
 }
 .result-info-container p {
   margin-bottom: 1rem;
+}
+.result-info-container a {
+  display: block;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content {

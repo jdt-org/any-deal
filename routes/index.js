@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fetch = require('node-fetch');
 const whiteList = require('../whiteList');
+const sortTags = require('../controller/sortTags')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -16,10 +17,9 @@ router.get('/results', function (req, res) {
     fetch(`https://api.reddit.com/r/${subreddit}/hot?limit=100`)
       .then(res => res.json())
       .then(body => {
-          const postTypes = body.data.children
         const subResults = body.data.children
-        console.log(postTypes)
-          res.render('results', { subResults })
+        console.log(sortTags(subResults))
+        res.render('results', { subResults })
     })
   }
 })
